@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  display: flex;
+}
+#root {
+  width: 1350px;
+  margin: auto;
+}
+.header {
+  margin: 12px 0;
+  padding: 0 15px;
+}
+.badge {
+  align-items: center;
+  justify-content: center;
+}
+table {
+  width: 100%;
+  border-collapse: separate;
+}
+td, th {
+  border-radius: 10px;
+  padding: 8px;
+}
+th {
+  padding: 18px 8px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+.btn  {
+  width: 85px;
+}
+.badge, thead tr, tbody tr:nth-child(even) {
+  background-color: rgb(188, 213, 238);
+}
+tbody tr:nth-child(odd) {
+  background-color: rgb(231, 231, 231);
+}
+td:nth-child(3),
+.buttonContainer,
+.operation {
+  text-align: center;
+}
+label {
+  margin: 10px 10px;
+  width: 7%;
+}
+.form-section {
+  margin: 12px 0;
+  display: flex;
+}
+input {
+  border-radius: 10px;
+  width: 95%;
+  padding-left: 10px;
+  font-size: 16px;
+}
+.validator {
+  color: red;
+  font-size: 18px;
+  display: flex;
+  margin-bottom: 10px;
+}
+.validatorMessage {
+  margin: auto;
+}
+.updateModalContainer {
+  position: absolute;
+  width: 100%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.updateModal {
+  border: 1px solid rgb(146, 165, 184);
+  border-radius: 20px;
+  background-color: rgb(188, 213, 238);
+  padding: 24px 30px;
+}
+.updateHeader {
+  align-items: center;
+}
+.modalHeader {
+  font-size: 2rem;
+}
+.updateStudentName {
+  font-size: 2.5rem;
+}
+.updateButtonsContainer {
+  justify-content: center;
+}
+
+@media only screen and (max-width: 575px) {
+  #root {
+    width: 575px;
+  }
+  .headerxs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header h1 {
+    font-size: 1.2rem;
+  }
+  .header h2 {
+    font-size: 0.9rem;
+  }
+  th {
+    font-size: 1rem;
+  }
+  .operation {
+    flex-direction: column;
+  }
+  form {
+    width: 275px;
+    margin: auto;
+  }
+  th, td,
+  .form-section input {
+    font-size: 0.8rem;
+  }
+  .form-section {
+    height: 32px;
+  }
+  .operation .btn,
+  .buttonContainer .btn {
+    font-size: 0.8rem;
+    width: 60px;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .header h1 {
+    font-size: 1.7rem;
+  }
+  .header h2 {
+    font-size: 1.1rem;
+  }
+  th, td {
+    font-size: 1rem;
+  }
+  form {
+    width: 275px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+  .header h2 {
+    font-size: 1.3rem;
+  }
+  th, td {
+    font-size: 1.2rem;
+  }
+  form {
+    width: 275px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 992px) {
+
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  .header h2 {
+    font-size: 1.8rem;
+  }
+  th {
+    font-size: 1.3rem;
+  }
+  form {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .header h2 {
+    font-size: 2rem;
+  }
+  th {
+    font-size: 1.4rem;
+  }
+}
