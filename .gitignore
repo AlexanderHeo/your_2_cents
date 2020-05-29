@@ -1,0 +1,7 @@
+.idea
+.vscode
+.DS_Store
+node_modules
+server/public/main.js*
+forum.css
+forum.html
