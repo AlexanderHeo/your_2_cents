@@ -24,24 +24,19 @@ class Forum extends React.Component {
   }
 
   render() {
-    const postsArr = this.props.themeView;
-    const posts = Object.values(postsArr);
-    // console.log(posts[0]);
-    if (posts[0].length === 0) {
+    const posts = this.props.posts;
+    if (posts.length === 0) {
       return <NoPost theme={this.state.openedPostIs}/>;
     } else {
       return (
-        posts[0].map(x => {
-          // console.log('x', x);
+        posts.map(x => {
           const id = x.id;
-          const post = x;
           return (
             <ForumPost
               openPost={this.handleClick}
               key={id}
-              post={post}
+              post={x}
               openedPostIs={this.state.openedPostIs}
-              themedPost={this.props.themedPost}
             />
           );
         })
