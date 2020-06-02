@@ -1,7 +1,7 @@
 {
   "name": "sgt-react",
   "version": "1.0.0",
-  "description": "The Student Grade Table: Written in React",
+  "description": "your 2 cents: Written in React",
   "main": "server/index.js",
   "scripts": {
     "watch": "webpack --mode=development --watch --devtool=source-map",
@@ -51,15 +51,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Learning-Fuze/sgt-react.git"
+    "url": "git+https://github.com/AlexanderHeo/your_2_cents.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Learning-Fuze/sgt-react/issues"
+    "url": "https://github.com/AlexanderHeo/your_2_cents/issues"
   },
-  "homepage": "https://github.com/Learning-Fuze/sgt-react#readme",
+  "homepage": "https://github.com/AlexanderHeo/your_2_cents#readme",
   "eslintIgnore": [
     "server/public/main.js"
   ],

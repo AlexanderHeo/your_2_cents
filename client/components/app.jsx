@@ -18,7 +18,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/api/grades')
+    fetch('/api/posts')
       .then(res => res.json())
       .then(data => {
         if (Object.keys(data)[0] === 'error') return;
@@ -45,9 +45,15 @@ class App extends React.Component {
           obj[theme] = uniqueThemeArray;
           post.push(obj);
         });
-        const innerObj = { all: data };
+        const innerObj = {};
+        const innerArr = [];
+        innerObj.new = data;
+        innerArr.push(innerObj);
+        // console.log('data:', data)
+        // console.log('innerObj:', innerObj);
+        // console.log('innerArr:', innerArr);
         this.setState({
-          posts: innerObj,
+          posts: innerArr,
           themedPost: post
         });
       });
@@ -55,20 +61,12 @@ class App extends React.Component {
 
   setView(theme) {
     if (!theme || !this.state.themedPost) return;
-    this.setState({
-      view: theme
-    });
     const themedPost = this.state.themedPost;
     const themeView = themedPost.filter(x => Object.keys(x)[0] === theme);
-    // console.log('themeView in setView:', themeView)
-    const themeViewOnly = Object.values(themeView);
     // console.log('themeView:', themeView);
-    // console.log('themeViewOnly:', themeViewOnly);
     this.setState({
-      themeView: {
-        [theme]: themeViewOnly
-      },
-      // themeView: [themeView],
+      view: theme,
+      themeView: themeView,
       newPost: false
     });
   }
@@ -81,6 +79,8 @@ class App extends React.Component {
 
   render() {
     if (this.state.posts.length === 0) return null;
+    // console.log('state.post:', this.state.posts)
+    // console.log('state.themeView:', this.state.themeView)
     return <div className="container">
       <Header
         setView={this.setView}
@@ -91,6 +91,7 @@ class App extends React.Component {
           ? <div className="main">
             <Forum
               posts={this.state.posts}
+              themedPost={this.state.themedPost}
               themeView={this.state.themeView}
               view={this.state.view}
             />

@@ -30,6 +30,7 @@ class ForumPost extends React.Component {
   // }
 
   render() {
+    // console.log('forum-posts:', this.props.post);
     if (!this.props.post) return null;
     const id = this.props.post.id;
     const openedPostIs = this.props.openedPostIs;

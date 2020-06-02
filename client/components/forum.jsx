@@ -25,16 +25,16 @@ class Forum extends React.Component {
 
   render() {
     const postsArr = this.props.themeView;
-    const posts = Object.values(postsArr);
-    // console.log(posts[0]);
-    if (posts[0].length === 0) {
+    const postsVal = Object.values(postsArr);
+    const posts = postsVal[0];
+    const post = Object.values(posts);
+    // console.log('posts:', posts);
+    if (post.length === 0) {
       return <NoPost theme={this.state.openedPostIs}/>;
     } else {
       return (
-        posts[0].map(x => {
-          // console.log('x', x);
+        post.map(x => {
           const id = x.id;
-          const post = x;
           return (
             <ForumPost
               openPost={this.handleClick}
