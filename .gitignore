@@ -1,1 +1,11 @@
+<<<<<<< HEAD
 node_modules
+=======
+.idea
+.vscode
+.DS_Store
+node_modules
+server/public/main.js*
+forum.css
+forum.html
+>>>>>>> 631a2ec1275608ec8140bd42c52ed2e37be48f5d
