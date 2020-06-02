@@ -8,18 +8,18 @@ class App extends React.Component {
     super(props);
     this.state = {
       posts: [],
+      newPost: false,
       view: 'all'
     };
     this.setView = this.setView.bind(this);
+    this.handleNewPost = this.handleNewPost.bind(this);
   }
 
   componentDidMount() {
     fetch('/api/posts')
       .then(res => res.json())
       .then(data => {
-        this.setState({
-          posts: data
-        });
+        this.setState({ posts: data });
       });
   }
 
@@ -32,9 +32,7 @@ class App extends React.Component {
   }
 
   handleNewPost() {
-    this.setState({
-      newPost: true
-    });
+    this.setState({ newPost: true });
   }
 
   render() {
