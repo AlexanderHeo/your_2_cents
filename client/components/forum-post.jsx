@@ -1,36 +1,8 @@
 import React from 'react';
 
 class ForumPost extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      theme: {
-        all: [],
-        sport: [],
-        politics: [],
-        tv: [],
-        movies: [],
-        books: [],
-        tech: [],
-        webdev: [],
-        random: []
-      }
-    };
-  }
-
-  // componentDidMount(props) {
-  //   const themedPost = this.props.post;
-  // console.log(themedPost)
-  // themedPost.map(posts => {
-  //   const post = Object.keys(posts);
-  //   this.setState({
-  //     posts: post
-  //   });
-  // });
-  // }
-
   render() {
-    // console.log('forum-posts:', this.props.post);
+
     if (!this.props.post) return null;
     const id = this.props.post.id;
     const openedPostIs = this.props.openedPostIs;
