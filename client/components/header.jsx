@@ -14,7 +14,7 @@ class Header extends React.Component {
     return (
       <div className="header">
         <div className="header-name">
-          <span className="name-label-span">Your 2 Cents</span>
+          <span className="name-label-span">your 2 cents</span>
         </div>
         <div className="navi-buttons">
           <form className="navi-theme-container">
