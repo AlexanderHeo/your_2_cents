@@ -8,7 +8,9 @@ body {
   width: 370px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
+/* header and footer */
 .header,
 .footer {
   height: 124px;
@@ -21,7 +23,7 @@ body {
 .header { margin-top: 10px; }
 .footer { margin-bottom: 10px; }
 .header-name {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   display: flex;
   justify-content: center;
 }
@@ -39,8 +41,6 @@ body {
   height: 47%;
   display: flex;
   border-radius: 25px;
-  align-items: center;
-  justify-content: center;
   border: none;
   background-color: #fff;
 }
@@ -56,7 +56,7 @@ body {
 .navi-post button {
   height: 1.6rem;
 }
-
+/* forum posts */
 .main {
   width: 370px;
   display: flex;
@@ -111,7 +111,7 @@ body {
 .content-clamp div {
   overflow: hidden;
 }
-
+/* open post */
 .post-container-open {
   width: 370px;
   border-radius: 0.25rem;
@@ -125,11 +125,33 @@ body {
   box-shadow: 0px 0px 15px 10px rgb(240, 240, 240);
   border-radius: 0.25rem;
 }
-
+/* new post form */
 .form {
   margin-top: 25px;
+  padding: 20px;
+  width: 330px;
+  border: 1px solid black;
+  border-radius: 0.25rem;
 }
-
+.form-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-section label {
+  width: 100px;
+}
+.form-section input,
+.form-section select,
+.form-section textarea {
+  width: 80%;
+}
+.form-section-button {
+  display: flex;
+  justify-content: center;
+}
+/* no post message */
 .no-post {
   margin: 25px 0;
   width: 370px;
@@ -148,6 +170,15 @@ body {
   .no-post {
     width: 572px;
   }
+  .navi-theme-container {
+    width: 85%;
+  }
+  .navi-post {
+    width: 15%;
+  }
+  .form {
+    width: 532px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .container,
@@ -163,16 +194,20 @@ body {
   }
   .navi-theme-container {
     width: 90%;
-    padding-top: 10px;
+    padding-top: 5px;
   }
   .navi-post {
     width: 10%;
   }
   .navi-theme-container>button {
     width: 11%;
+    margin: 0;
+  }
+  .form {
+    width: 720px;
   }
 }
-@media only screen and (min-width: 992px) {
+/* @media only screen and (min-width: 992px) {
   .header, .footer {
     width: 986px;
     align-self: center;
@@ -185,4 +220,4 @@ body {
   .navi-post {
     justify-content: center;
   }
-}
+} */

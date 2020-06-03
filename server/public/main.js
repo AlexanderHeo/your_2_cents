@@ -417,16 +417,14 @@ class NewPost extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
   render() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "container"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "form"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "form-section"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       htmlFor: "title"
-    }, "title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "title")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       type: "text",
-      placehodler: "title",
+      placeholder: "title",
       name: "title",
       value: this.state.title,
       onChange: this.handleChange
@@ -434,24 +432,44 @@ class NewPost extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       className: "form-section"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       htmlFor: "theme"
-    }, "theme"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "theme")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
       type: "text",
-      placeholder: "theme",
       name: "theme",
       value: this.state.theme,
       onChange: this.handleChange
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "default"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "all"
+    }, "all"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "sports"
+    }, "sports"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "politics"
+    }, "politics"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "tv"
+    }, "tv"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "movies"
+    }, "moves"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "books"
+    }, "books"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "tech"
+    }, "tech"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "webdev"
+    }, "webdev"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "random"
+    }, "random"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "form-section"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       htmlFor: "content"
-    }, "your 2cents"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "your 2 cents")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
       type: "text",
-      placeholder: "content",
+      placeholder: "2 cents",
       name: "content",
       value: this.state.content,
-      onChange: this.handleChange
+      onChange: this.handleChange,
+      rows: "15"
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "form-section"
+      className: "form-section-button"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       type: "submit",
       name: "submit",
@@ -460,7 +478,7 @@ class NewPost extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       type: "submit",
       name: "cancel",
       className: "button"
-    }, "cancel"))));
+    }, "cancel")));
   }
 
 }
