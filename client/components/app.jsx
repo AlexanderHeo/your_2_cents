@@ -11,7 +11,7 @@ class App extends React.Component {
       newPost: false,
       view: 'all'
     };
-    this.setView = this.setView.bind(this);
+    this.setTheme = this.setTheme.bind(this);
     this.handleNewPost = this.handleNewPost.bind(this);
   }
 
@@ -23,8 +23,38 @@ class App extends React.Component {
       });
   }
 
-  setView(theme) {
+  setTheme(theme) {
     if (!theme) return;
+    let themeId = '';
+    switch (theme) {
+      case 'all': themeId = '1';
+        break;
+      case 'sports': themeId = '2';
+        break;
+      case 'politics': themeId = '3';
+        break;
+      case 'tv': themeId = '4';
+        break;
+      case 'movies': themeId = '5';
+        break;
+      case 'books': themeId = '6';
+        break;
+      case 'tech': themeId = '7';
+        break;
+      case 'webdev': themeId = '8';
+        break;
+      case 'random': themeId = '9';
+        break;
+      default: themeId = '1';
+    }
+    fetch(`/api/posts/${themeId}`)
+      .then(res => res.json())
+      .then(data => {
+        !data
+          ? this.setState({ posts: [] })
+          : this.setState({ posts: data });
+      });
+
     this.setState({
       view: theme,
       newPost: false
@@ -39,7 +69,7 @@ class App extends React.Component {
     if (this.state.posts.length === 0) return null;
     return <div className="container">
       <Header
-        setView={this.setView}
+        setTheme={this.setTheme}
         handleNewPost={this.handleNewPost}
       />
       {

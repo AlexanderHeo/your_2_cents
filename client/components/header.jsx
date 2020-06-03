@@ -7,7 +7,7 @@ class Header extends React.Component {
   }
 
   handleClick(event) {
-    this.props.setView(event.target.name);
+    this.props.setTheme(event.target.name);
   }
 
   render() {

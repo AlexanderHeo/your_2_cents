@@ -30,7 +30,7 @@ class Forum extends React.Component {
     } else {
       return (
         posts.map(x => {
-          const id = x.id;
+          const id = x.postId;
           return (
             <ForumPost
               openPost={this.handleClick}
