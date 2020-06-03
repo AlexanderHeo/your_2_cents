@@ -13,7 +13,7 @@ body {
 /* header and footer */
 .header,
 .footer {
-  height: 124px;
+  height: 115px;
   width: 370px;
   border: 1px solid black;
   border-radius: 0.25rem;
@@ -190,7 +190,7 @@ body {
     width: 760px;
   }
   .header, .footer {
-    height: 85px;
+    height: 75px;
   }
   .navi-theme-container {
     width: 90%;
